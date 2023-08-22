@@ -32,3 +32,6 @@ C:\Users\barp\OneDrive - acsmotioncontrol.com\Desktop\HorizontalList-master\Hori
 C:\Users\barp\OneDrive - acsmotioncontrol.com\Desktop\HorizontalList-master\HorizontalList-master\HorizontalList\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\barp\OneDrive - acsmotioncontrol.com\Desktop\HorizontalList-master\HorizontalList-master\HorizontalList\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\barp\OneDrive - acsmotioncontrol.com\Desktop\HorizontalList-master\HorizontalList-master\HorizontalList\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\barp\OneDrive - acsmotioncontrol.com\Desktop\HorizontalList-master\HorizontalList-master\HorizontalList\obj\Debug\App.baml
+C:\Users\barp\OneDrive - acsmotioncontrol.com\Desktop\HorizontalList-master\HorizontalList-master\HorizontalList\obj\Debug\Window1.g.cs
+C:\Users\barp\OneDrive - acsmotioncontrol.com\Desktop\HorizontalList-master\HorizontalList-master\HorizontalList\obj\Debug\Window1.baml

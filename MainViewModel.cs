@@ -79,7 +79,6 @@ namespace HorizontalList
                 Products.Add(new Product("SPiiPlusCMnt", "10.0.0.104"));
                 Products.Add(new Product("IOMpsAnalog", "10.0.0.106"));
                 Products.Add(new Product("DC-LT", "10.0.0.106"));
-                Products.Add(new Product("UDMpc", "10.0.0.107"));
                 Products.Add(new Product("SPiiPlusCMhp_108", "10.0.0.108"));
                 Products.Add(new Product("UDMsm", "10.0.0.109"));
                 Products.Add(new Product("ECMma Dual Loop", "10.0.0.110"));
@@ -126,7 +125,7 @@ namespace HorizontalList
             ErrStr = error.ToString();
             try
             {
-                _api.OpenCommEthernetTCP(controllerIp, port);
+                _api.OpenCommEthernet(controllerIp, port);
                 _api.CloseComm();
                 error = _api.GetLastError();
             }
