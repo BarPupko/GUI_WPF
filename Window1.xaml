@@ -15,7 +15,15 @@
             <!--WindowStartupLocation="CenterScreen" WindowStyle="None"
                 Background="White" AllowsTransparency="True"-->
             
-            
+            <!--LEFT MENU-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    
+
+                </Grid.RowDefinitions>
+            </Grid>
         </Grid>
     </Border>
 </Window>
