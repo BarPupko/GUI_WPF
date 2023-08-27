@@ -22,6 +22,7 @@ namespace HorizontalList
         public Window1()
         {
             InitializeComponent();
+
         }
 
         private void Border_MouseDown(object sender,MouseButtonEventArgs e)
@@ -51,6 +52,16 @@ namespace HorizontalList
                     isMaximize=true; 
                 }
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void membersDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

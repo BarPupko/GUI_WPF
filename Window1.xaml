@@ -3,26 +3,247 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:local="clr-namespace:HorizontalList"
         Icon="Assets/icon.png"
         mc:Ignorable="d"
         Title="Window1" Height="720" Width="1080" 
         
         >
-    <Border Background="Wheat" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
-        <Grid>
 
-            <!--WindowStartupLocation="CenterScreen" WindowStyle="None"
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+    </Window.Resources>
+    <Border Background="White" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+
+
+        <!--WindowStartupLocation="CenterScreen" WindowStyle="None"
                 Background="White" AllowsTransparency="True"-->
-            
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
             <!--LEFT MENU-->
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="*"/>
-                    
-
                 </Grid.RowDefinitions>
+
+
+                <!--MenuIcon-->
+
+                <Button Margin="20 28 0 35" Style="{StaticResource topButton}">
+                    <Icon:PackIconMaterial Kind="Menu" Width="15" Height="15"/>
+                </Button>
+
+                <Border Grid.Row="1" Background="#E8E5E5" CornerRadius="0 50 0 0">
+                    <DockPanel>
+                        <!--MenuLogo-->
+                        <Border Width="80" Height="80" Padding="3" Background="White" CornerRadius="100"
+                                DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20 -30 0 0">
+                            <Ellipse>
+                                <Ellipse.Fill>
+                                    <ImageBrush ImageSource="/Assets/icon.png"    />
+                                </Ellipse.Fill>
+                            </Ellipse>
+                        </Border>
+
+
+                        <!--Menu Titles-->
+                        <TextBlock Text="Validation Lab" Foreground="#4F4F4F" FontSize="22" FontWeight="SemiBold"
+                                   DockPanel.Dock="Top" TextAlignment="Center" Margin="5 25 0 10"/>
+
+                        <TextBlock Text="Acs Motion Control LTD" Foreground="#E14E4E" FontSize="14" FontWeight="SemiBold"
+                                   DockPanel.Dock="Top" TextAlignment="Center"/>
+
+                        <!--Menu Seprator-->
+                        <Separator Margin="25" DockPanel.Dock="Top" Height="0.8" Background="#E14E4E"/>
+
+                        <!--Menu Button-->
+                        <StackPanel DockPanel.Dock="Top">
+                            <Button Style="{StaticResource menuButton}" Background="#E14E4E" Foreground="White" Click="Button_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Kind="HomeVariant" Style="{StaticResource menuButtonIcon }"/>
+                                    <TextBlock Text="Controllers"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+
+                        </StackPanel>
+
+                        <StackPanel DockPanel.Dock="Top">
+                            <Button Style="{StaticResource menuButton}" Background="#E14E4E" Foreground="White">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Kind="CameraControl" Style="{StaticResource menuButtonIcon }"/>
+                                    <TextBlock Text="Controller Table"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+
+                        </StackPanel>
+
+
+
+                        <!--End of Menu-->
+                    </DockPanel>
+                    <!--Menu Border-->
+                </Border>
+            </Grid>
+
+
+            <!--Main Section-->
+            <Grid Grid.Column="1" Margin="30 20 20 20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="59*"/>
+                    <RowDefinition Height="209*"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+
+                <!--Search Box-->
+                <!--<Grid Width="300" HorizontalAlignment="Left">
+                    <TextBlock Margin="20 0" VerticalAlignment="Center" Foreground="#b0b9c6" IsHitTestVisible="False"
+                           Panel.ZIndex="1" Text="Search Here..."
+                           Visibility="{Binding ElementName=txtSearch,Path=Text.IsEmpty,Converter={StaticResource BoolToVis}}"/>
+
+                    <TextBox x:Name="txtSearch" Style="{StaticResource textboxSearch}"/>
+
+                    <Icon:PackIconMaterial Kind="Magnify" Width="15" Height="15" VerticalAlignment="Center"
+                                       Margin="0 0 15 0" Foreground="#b0b9c6" HorizontalAlignment="Right"/>
+                </Grid>-->
+                <!--Top Buttons-->
+                <Button Style="{StaticResource topButton}" Margin="794,21,0,22">
+                    <Icon:PackIconMaterial Kind="Cog"/>
+                </Button>
+
+                <Button Style="{StaticResource topButton}" Margin="759,21,0,22">
+                    <Icon:PackIconMaterial Kind="bell"/>
+                </Button>
+
+                <!--Page Title-->
+                <TextBlock Text="Controllers" Grid.Row="0" FontSize="32" FontWeight="SemiBold" Margin="0,20,0,55"
+                           HorizontalAlignment="Left" Foreground="#4F4F4F" Grid.RowSpan="3"/>
+
+                <!--<Button Style="{StaticResource addButton}" >
+                    <StackPanel Orientation="Horizontal">
+                        <Icon:PackIconMaterial Kind="Plus" VerticalAlignment="Center" Width="11" Height="11" Margin="0 1 8 0"/>
+                        <TextBlock Text="Add New Member"/>
+                    </StackPanel>
+                </Button>-->
+                <!--MAIN GRID-->
+
+                <!--Menu Seprator-->
+                <!--<Separator Height="1" Grid.Row="2" Background="#dae2ea" Margin="0,54,0,10" Grid.RowSpan="2"/>
+                <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,10,0,10" Grid.RowSpan="2">
+                    <Button Content="IP" Style="{StaticResource tabButton}"/>
+                    <Button Content="Name" Style="{StaticResource tabButton}"/>
+                    <Button Content="FPGA Ver" Style="{StaticResource tabButton}"/>
+                    <Button Content="Firmware Ver" Style="{StaticResource tabButton}"/>
+                    <Button Content="Serial Number" Style="{StaticResource tabButton}"/>
+                    <Button Content="Part Number" Style="{StaticResource tabButton}"/>
+
+                </StackPanel>-->
+                <!--Counter Title-->
+
+
+                <!--<TextBlock Text="Filter By" Grid.Row="4" FontSize="18" FontWeight="SemiBold"
+                           Foreground="black" HorizontalAlignment="Right" VerticalAlignment="Center"/>-->
+
+                <!--Filter Box-->
+                <!--
+                <Grid Width="200" HorizontalAlignment="Right" Grid.Row="4">
+                    <TextBlock Margin="15 0" VerticalAlignment="Center" Foreground="#b0b9c6" IsHitTestVisible="False"
+                           Panel.ZIndex="1" Text="Search for controller..."
+                           Visibility="{Binding ElementName=txtFilter,Path=Text.IsEmpty,Converter={StaticResource BoolToVis}}"/>
+
+                    <TextBox x:Name="txtFilter" Style="{StaticResource textboxSearch}"/>
+
+                    <Icon:PackIconMaterial Kind="Magnify" Width="15" Height="15" VerticalAlignment="Center"
+                                       Margin="0 0 15 0" Foreground="#b0b9c6" HorizontalAlignment="Right"/>
+                </Grid>-->
+
+
+
+                <!--Members Datagrid-->
+                <DataGrid Template="{DynamicResource DataGridStyle1}" 
+                          CellStyle="{DynamicResource DataGridCellStyle1}" 
+                          RowStyle="{DynamicResource DataGridRowStyle1}" 
+                          Grid.Row="5" x:Name="membersDataGrid" 
+                          SelectionChanged="membersDataGrid_SelectionChanged"
+                          Height="auto"
+                          ItemsSource="{Binding Products}">
+                    <DataGrid.Columns>
+                      
+
+                    <DataGridTextColumn Header="#" IsReadOnly="True" CanUserResize="False" Width="auto" />
+
+                    <DataGridTemplateColumn Header="Operations" IsReadOnly="True" Width="auto">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Border Width="25" Height="25" CornerRadius="50" Margin="0 0 10 0" Background="red">
+                                        <TextBlock Text="..." VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Margin="0 0 0 1"/>
+                                    </Border>
+                                    <TextBlock Text="...." VerticalAlignment="Center"/> 
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                        <DataGridTextColumn Header="IP" IsReadOnly="True" CanUserResize="False" Width="auto" Binding="{Binding ControllerIP}"/>
+                        <DataGridTextColumn Header="Name" IsReadOnly="True" CanUserResize="False" Width="auto" Binding="{Binding Name}"/>
+                        <DataGridTextColumn Header="FPGA Version" IsReadOnly="True" CanUserResize="False" Width="auto" Binding="{Binding Name}"/>
+                        <DataGridTextColumn Header="Firmware Version" IsReadOnly="True" CanUserResize="False" Width="auto"/>
+                        <DataGridTextColumn Header="Serial Number" IsReadOnly="True" CanUserResize="False" Width="auto"/>
+                        <DataGridTextColumn Header="Part Number" IsReadOnly="True" CanUserResize="False" Width="auto"/>
+
+                    </DataGrid.Columns>
+                </DataGrid>
+
+
+
+
+
+
+                <!--Pagination Section-->
+                <!--<Border Grid.Row="6" HorizontalAlignment="Right" BorderBrush="#dee4ec" BorderThickness="1"
+                        CornerRadius="5" Padding="5" Background="White" Margin="0 10 10 10">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Style="{StaticResource pagingButton}">
+                            <Icon:PackIconMaterial Kind="ChevronLeft" Style="{StaticResource pagingButtonIcon}"/>
+                        </Button>
+
+                        <Rectangle Width="1" Fill="#dee4ec" Margin="3 7"/>
+                        <Button Style="{StaticResource pagingButton}" Content="1"/>
+                        <Button Style="{StaticResource pagingButton}" Content="2" Background="#7950f2" Foreground="White"/>
+                        <Button Style="{StaticResource pagingButton}" Content="3"/>
+
+                        <TextBox Text="..." Foreground="#6c7682" VerticalAlignment="Center" FontSize="15" Margin="10 0"/>
+
+                        <Button Style="{StaticResource pagingButton}" Content="7"/>
+                        <Button Style="{StaticResource pagingButton}" Content="8"/>
+                        <Button Style="{StaticResource pagingButton}" Content="9"/>
+                        
+                        <Rectangle Width="1" Fill="#dee4ec" Margin="3 7"/>
+                        
+                        <Button Style="{StaticResource pagingButton}">
+                            <Icon:PackIconMaterial Kind="ChevronRight" Style="{StaticResource pagingButtonIcon}"/>
+                        </Button>
+
+                        <Rectangle Width="1" Fill="#dee4ec" Margin="3 7"/>
+
+                    </StackPanel>
+                </Border>-->
+
+
+
             </Grid>
         </Grid>
     </Border>

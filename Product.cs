@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
@@ -20,6 +21,10 @@ namespace HorizontalList
 
         private string _Name;
         private string _ControllerIP;
+        private int _FPGAVersion;
+        private string _FirmwareVersion;
+        private string _SerialVersion;
+        private string _PartNumber;
         //private int _OutOfPing;
         private SolidColorBrush _StatusColor;
 
@@ -33,6 +38,30 @@ namespace HorizontalList
         {
             get => _ControllerIP;
             set => SetProperty(ref _ControllerIP, value);
+        }
+
+        public int FPGAVersion
+        {
+            get => _FPGAVersion;
+            set => SetProperty(ref _FPGAVersion, value);
+        }
+
+        public string FirmwareVersion
+        {
+            get => _FirmwareVersion;
+            set => SetProperty(ref _FirmwareVersion, value);
+        }
+
+        public string SerialVersion
+        {
+            get => _SerialVersion;
+            set => SetProperty(ref _SerialVersion, value);
+        }
+
+        public string PartNumber
+        {
+            get => _PartNumber;
+            set => SetProperty(ref _PartNumber, value);
         }
 
         public int OutOfPing { get; set; }
@@ -59,9 +88,24 @@ namespace HorizontalList
             Error = error;
             OutOfPing = 0;
             midTest = false;
+            FPGAVersion = GetFpgaRevision("FPGA rev. :  233");
         }
 
+        static int GetFpgaRevision(string text)
+        {
+            // Use regular expressions to find the line containing "FPGA rev"
+            Match fpgaMatch = Regex.Match(text, @"FPGA rev\. : (\d+)");
 
+            if (fpgaMatch.Success)
+            {
+                int fpgaRev = int.Parse(fpgaMatch.Groups[1].Value);
+                return fpgaRev;
+            }
+            else
+            {
+                return -1; // Indicate that FPGA revision was not found
+            }
+        }
 
 
 

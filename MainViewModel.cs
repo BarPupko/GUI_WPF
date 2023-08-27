@@ -32,6 +32,13 @@ namespace HorizontalList
             UpdateControllerStatus();
         }
 
+        public int _selectedTabIndex;
+        public int SelectedTabIndex
+        {
+            get => _selectedTabIndex;
+            set => SetProperty(ref _selectedTabIndex, value);
+        }
+
         private ObservableCollection<Product> _products = new ObservableCollection<Product>();
         public ObservableCollection<Product> Products
         {
