@@ -53,56 +53,56 @@ namespace HorizontalList
             //Task.Run(() =>
             //{
 
-                //productList.Add(new Product("SystemSetupMC4U", "10.0.0.91", ConvertToColorBrush(checkIfOnline("10.0.0.91"))));
-                //productList.Add(new Product("UpgraderMC4U", "10.0.0.91", ConvertToColorBrush(checkIfOnline("10.0.0.92"))));
-                //productList.Add(new Product("Gantry", "10.0.0.94", ConvertToColorBrush(checkIfOnline("10.0.0.94"))));
-                ////    new Product("SystemSetupMC4U", "10.0.0.91", ),
+            //productList.Add(new Product("SystemSetupMC4U", "10.0.0.91", ConvertToColorBrush(checkIfOnline("10.0.0.91"))));
+            //productList.Add(new Product("UpgraderMC4U", "10.0.0.91", ConvertToColorBrush(checkIfOnline("10.0.0.92"))));
+            //productList.Add(new Product("Gantry", "10.0.0.94", ConvertToColorBrush(checkIfOnline("10.0.0.94"))));
+            ////    new Product("SystemSetupMC4U", "10.0.0.91", ),
 
 
-                Products.Add(new Product("SPiiPlusNT-HP", "10.0.0.91"));
-                Products.Add(new Product("IDMsm", "10.0.0.92"));
-                Products.Add(new Product("ECMsm Absolute Encoders", "10.0.0.93" ));
-                Products.Add(new Product("Gantry", "10.0.0.94"));
-                Products.Add(new Product("IDMsa", "10.0.0.96"));
-                Products.Add(new Product("IDMsa Routing", "10.0.0.97"));
-                Products.Add(new Product("ECMsm", "10.0.0.98"));
-                Products.Add(new Product("UDMpc", "10.0.0.101"));
-                Products.Add(new Product("LCMv2", "10.0.0.101"));
-                Products.Add(new Product("IOMnt", "10.0.0.101"));
-                Products.Add(new Product("UDMpa", "10.0.0.101"));
-                Products.Add(new Product("SDMnt", "10.0.0.101"));
-                Products.Add(new Product("PDMnt", "10.0.0.101"));
-                Products.Add(new Product("UDIhp", "10.0.0.101"));
-                Products.Add(new Product("UDMmc", "10.0.0.101"));
-                Products.Add(new Product("Beckhoff", "10.0.0.101"));
-                Products.Add(new Product("PDIcl", "10.0.0.101"));
-                Products.Add(new Product("UDMlc", "10.0.0.101"));
-                Products.Add(new Product("NPApm", "10.0.0.101"));
-                Products.Add(new Product("IOMpsDigital", "10.0.0.101"));
-                Products.Add(new Product("DC-HP", "10.0.0.101"));
-                Products.Add(new Product("SPiiPlusEC21Nodes", "10.0.0.101"));
-                Products.Add(new Product("LCI", "10.0.0.102"));
-                Products.Add(new Product("SPiiPlusCMhv", "10.0.0.103"));
-                Products.Add(new Product("SPiiPlusCMnt", "10.0.0.104"));
-                Products.Add(new Product("IOMpsAnalog", "10.0.0.106"));
-                Products.Add(new Product("DC-LT", "10.0.0.106"));
-                Products.Add(new Product("SPiiPlusCMhp_108", "10.0.0.108"));
-                Products.Add(new Product("UDMsm", "10.0.0.109"));
-                Products.Add(new Product("ECMma Dual Loop", "10.0.0.110"));
-                Products.Add(new Product("UDMsa", "10.0.0.111"));
-                Products.Add(new Product("UDMxa", "10.0.0.112"));
-                Products.Add(new Product("SPiiPlusCMhp", "10.0.0.113"));
-                Products.Add(new Product("SPiiPlusCMbaDualLoop", "10.0.0.117"));
-                Products.Add(new Product("SPiiPlusEC32Nodes", "10.0.0.118"));
-                Products.Add(new Product("ECMma", "10.0.0.120"));
-                Products.Add(new Product("UDMma", "10.0.0.121"));
-                Products.Add(new Product("IDMma", "10.0.0.122"));
-                Products.Add(new Product("ECMsa", "10.0.0.123"));
-                Products.Add(new Product("MP4UNPMpc", "10.0.0.126"));
-                Products.Add(new Product("SPiiPlusCMxa", "10.0.0.128"));
-                Products.Add(new Product("DualEtherCAT", "10.0.0.131"));
-                Products.Add(new Product("UDMdx", "10.0.0.132"));
-                Products.Add(new Product("SpiiPlus SC", "10.0.0.135"));
+            Products.Add(new Product("SPiiPlusNT-HP", "10.0.0.91"));
+            Products.Add(new Product("IDMsm", "10.0.0.92"));
+            Products.Add(new Product("ECMsm Absolute Encoders", "10.0.0.93"));
+            Products.Add(new Product("Gantry", "10.0.0.94"));
+            Products.Add(new Product("IDMsa", "10.0.0.96"));
+            Products.Add(new Product("IDMsa Routing", "10.0.0.97"));
+            Products.Add(new Product("ECMsm", "10.0.0.98"));
+            Products.Add(new Product("UDMpc", "10.0.0.101"));
+            Products.Add(new Product("LCMv2", "10.0.0.101"));
+            Products.Add(new Product("IOMnt", "10.0.0.101"));
+            Products.Add(new Product("UDMpa", "10.0.0.101"));
+            Products.Add(new Product("SDMnt", "10.0.0.101"));
+            Products.Add(new Product("PDMnt", "10.0.0.101"));
+            Products.Add(new Product("UDIhp", "10.0.0.101"));
+            Products.Add(new Product("UDMmc", "10.0.0.101"));
+            Products.Add(new Product("Beckhoff", "10.0.0.101"));
+            Products.Add(new Product("PDIcl", "10.0.0.101"));
+            Products.Add(new Product("UDMlc", "10.0.0.101"));
+            Products.Add(new Product("NPApm", "10.0.0.101"));
+            Products.Add(new Product("IOMpsDigital", "10.0.0.101"));
+            Products.Add(new Product("DC-HP", "10.0.0.101"));
+            Products.Add(new Product("SPiiPlusEC21Nodes", "10.0.0.101"));
+            Products.Add(new Product("LCI", "10.0.0.102"));
+            Products.Add(new Product("SPiiPlusCMhv", "10.0.0.103"));
+            Products.Add(new Product("SPiiPlusCMnt", "10.0.0.104"));
+            Products.Add(new Product("IOMpsAnalog", "10.0.0.106"));
+            Products.Add(new Product("DC-LT", "10.0.0.106"));
+            Products.Add(new Product("SPiiPlusCMhp_108", "10.0.0.108"));
+            Products.Add(new Product("UDMsm", "10.0.0.109"));
+            Products.Add(new Product("ECMma Dual Loop", "10.0.0.110"));
+            Products.Add(new Product("UDMsa", "10.0.0.111"));
+            Products.Add(new Product("UDMxa", "10.0.0.112"));
+            Products.Add(new Product("SPiiPlusCMhp", "10.0.0.113"));
+            Products.Add(new Product("SPiiPlusCMbaDualLoop", "10.0.0.117"));
+            Products.Add(new Product("SPiiPlusEC32Nodes", "10.0.0.118"));
+            Products.Add(new Product("ECMma", "10.0.0.120"));
+            Products.Add(new Product("UDMma", "10.0.0.121"));
+            Products.Add(new Product("IDMma", "10.0.0.122"));
+            Products.Add(new Product("ECMsa", "10.0.0.123"));
+            Products.Add(new Product("MP4UNPMpc", "10.0.0.126"));
+            Products.Add(new Product("SPiiPlusCMxa", "10.0.0.128"));
+            Products.Add(new Product("DualEtherCAT", "10.0.0.131"));
+            Products.Add(new Product("UDMdx", "10.0.0.132"));
+            Products.Add(new Product("SpiiPlus SC", "10.0.0.135"));
 
             Task.Run(() =>
             {
@@ -115,11 +115,11 @@ namespace HorizontalList
                     });
                 }
             });
-            
-                //Application.Current.Dispatcher.Invoke(() =>
-                //{
-                //    ListViewProducts.ItemsSource = productList;
-                //});
+
+            //Application.Current.Dispatcher.Invoke(() =>
+            //{
+            //    ListViewProducts.ItemsSource = productList;
+            //});
             //});
         }
 
@@ -141,7 +141,7 @@ namespace HorizontalList
                 //product.Error = ErrStr;
 
             }
-            return "";    
+            return "";
         }
 
         private async void UpdateControllerStatus()

@@ -154,7 +154,7 @@ namespace HorizontalList
         {
             prod.midTest = true;
             string Online = "GreenYellow";
-            string Error = "Red";
+            string Error = "#7393B3";
             string Rebooted = "Yellow";
             bool pingable = false;
             Ping pinger = null;
